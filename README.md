@@ -1,19 +1,11 @@
 # ReST: A Reconfigurable Spatial-Temporal Graph Model for Multi-Camera Multi-Object Tracking
 
-We will release the code for our paper in ICCV 2023. For more information, please refer to our accepted paper in ICCV 2023.
+Official [PyTorch](https://pytorch.org/) implementation of "[ReST: A Reconfigurable Spatial-Temporal Graph Model for Multi-Camera Multi-Object Tracking]()" accepted to ICCV 2023.
 
-<!--
-# Introduction
-This repository contains the official implementation of **ReST: A Reconfigurable Spatial-Temporal Graph Model for Multi-Camera Multi-Object Tracking**.
+## News
+* 2023.7 Our paper is accepted to [ICCV 2023](https://iccv2023.thecvf.com/)!
 
-# UPDATES
+## Contact
+If you have any questions, please feel free to contact us.
 
-# Get Started
-
-## Installation
-
-
-# Citation
-
-# Reference
--->
+E-mail: chengche6230@gmail.com

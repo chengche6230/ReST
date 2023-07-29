@@ -10,6 +10,7 @@
 
 ## DEMO
 ### Wildtrack
+<img src="https://github.com/chengche6230/ReST/blob/main/doc/ReST_demo_Wildtrack.gif" width="65%" height="65%"/>
 
 ## Contact
 If you have any questions, please feel free to contact us.

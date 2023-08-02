@@ -1,0 +1,42 @@
+MODEL:
+  DEVICE: "cuda"
+  DEVICE_ID: ('0')
+  MODE: 'test'
+  DETECTION: 'gt' # {'gt' | 'MVDeTr'}
+  RESUME: false
+  LAST_CKPT_FILE: './'
+
+DATASET:
+  DIR: './datasets/'
+  NAME: 'Wildtrack'
+  SEQUENCE: ['sequence1']
+  CAMS: 7
+  TOTAL_FRAMES: 400
+
+FE: # Feature Extractor
+  CHOICE: 'CNN'
+  INPUT_SIZE: (256, 128)
+
+SOLVER:
+  TYPE: 'TG' # {'SG': Spatial Graph, 'TG': Temporal Graph}
+  EPOCHS: 100
+  EVAL_EPOCH: 2
+  BATCH_SIZE: 32
+  LR: 0.01 # Learning Rate
+  MAX_PASSING_STEPS: 4
+  W: 3 # Temporal Window Size
+  W_TEST: 5
+  FOCAL_ALPHA: 0.98
+  FOCAL_GAMMA: 5
+
+OUTPUT:
+  VISUALIZE: True
+  LOG: True
+  CKPT_DIR: './logs/ckpts'
+  INFERENCE_DIR: './logs/inference'
+
+TEST:
+  CKPT_FILE_SG: './'
+  CKPT_FILE_TG: './'
+  FRAME_START: 360
+  EDGE_THRESH: 0.9

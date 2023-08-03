@@ -131,13 +131,11 @@ In `{DATASET_NAME}.yml`:
 
 ## Citation
 If you find this code useful for your research, please cite our paper
-<!---
 ```text
-@InProceedings{
-    author    = {},
+@InProceedings{Cheng_2023_ICCV,
+    author    = {Cheng, Cheng-Che and Qiu, Min-Xuan and Chiang, Chen-Kuo and Lai, Shang-Hong},
     title     = {ReST: A Reconfigurable Spatial-Temporal Graph Model for Multi-Camera Multi-Object Tracking},
     booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
     year      = {2023}
 }
 ```
---->

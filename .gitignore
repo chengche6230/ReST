@@ -127,3 +127,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# dataset
+datasets/Wildtrack/sequence1/output
+
+# log
+logs/*
+!logs/ckpts/
+!logs/inference/

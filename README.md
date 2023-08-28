@@ -1,7 +1,14 @@
-<h1 align="center">ReST 🛌 (ICCV2023)</h1>
-<h3 align="center">ReST: A Reconfigurable Spatial-Temporal Graph Model for Multi-Camera Multi-Object Tracking</h3>
-<p align="center"><a href="https://github.com/chengche6230">Cheng-Che Cheng</a><sup>1</sup>, Min-Xuan Qiu<sup>1</sup>, <a href="https://www.cs.ccu.edu.tw/~ckchiang/">Chen-Kuo Chiang</a><sup>2</sup>, <a href="https://cv.cs.nthu.edu.tw/people.php">Shang-Hong Lai</a><sup>1</sup></p>
-<p align="center"><sup>1</sup>National Tsing Hua University, Taiwan, <sup>2</sup>National Chung Cheng University, Taiwan</p>
+<div align="center">
+<h1>ReST 🛌 (ICCV2023)</h1>
+<h3>ReST: A Reconfigurable Spatial-Temporal Graph Model for Multi-Camera Multi-Object Tracking</h3>
+
+[Cheng-Che Cheng](https://github.com/chengche6230)<sup>1</sup>&nbsp; Min-Xuan Qiu<sup>1</sup>&nbsp; [Chen-Kuo Chiang](https://www.cs.ccu.edu.tw/~ckchiang/)<sup>2</sup>&nbsp; [Shang-Hong Lai](https://cv.cs.nthu.edu.tw/people.php)<sup>1</sup>&nbsp;
+
+<sup>1</sup>National Tsing Hua University, Taiwan &nbsp;<sup>2</sup>National Chung Cheng University, Taiwan
+
+[![arXiv](https://img.shields.io/badge/arXiv-<2308.13229>-<COLOR>.svg)](https://arxiv.org/abs/2308.13229)
+
+</div>
 
 ## News
 * 2023.8 Code release

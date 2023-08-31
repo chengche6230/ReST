@@ -40,7 +40,7 @@ ReST, a novel reconfigurable graph model, that first associates all detected obj
      conda install pytorch torchvision cudatoolkit=9.0 -c pytorch
      python setup.py develop
 
-     # other paskages (in /ReST)
+     # other packages (in /ReST)
      conda install -c dglteam/label/cu117 dgl
      pip install git+https://github.com/ildoonet/pytorch-gradual-warmup-lr.git
      pip install motmetrics

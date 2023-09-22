@@ -366,6 +366,7 @@ class Tracklet():
 
         g_fID = self.graph.ndata['fID']
         g_tID = self.graph.ndata['tID_pred']
+        g_proj = self.graph.ndata['proj']
 
         dfs = []
         for _ in range(self.cfg.DATASET.CAMS):
@@ -398,6 +399,30 @@ class Tracklet():
                           sep=',',
                           mode='a')
 
+        gp_dfs = pd.DataFrame(columns=attr)
+        for n in range(self.graph.num_nodes()):
+            if g_fID[n] != current_fID:  # online method, only preprocess current nodes
+                continue
+            y, x, _ = g_proj[n].cpu().tolist()
+            gp_dfs = gp_dfs.append(
+                {
+                    'frame': frame,
+                    'id': g_tID[n].cpu().item(),
+                    'bb_left': -1,
+                    'bb_top': -1,
+                    'bb_width': -1,
+                    'bb_height': -1,
+                    'conf': 1,
+                    'x': x,
+                    'y': y,
+                    'z': -1
+                },
+                ignore_index=True)
+        gp_dfs.to_csv(os.path.join(self.outpu_dir, f'gp.txt'),
+                      header=None,
+                      index=None,
+                      sep=',',
+                      mode='a')
     def aggregating_tg(self):
         nxg = dgl.to_networkx(self.graph.cpu()).to_undirected()
 

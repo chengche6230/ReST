@@ -6,7 +6,10 @@
 
 <sup>1</sup>National Tsing Hua University, Taiwan &nbsp;<sup>2</sup>National Chung Cheng University, Taiwan
 
-[![arXiv](https://img.shields.io/badge/arXiv-<2308.13229>-<COLOR>.svg)](https://arxiv.org/abs/2308.13229)
+[![arXiv](https://img.shields.io/badge/arXiv-2308.13229-b31b1b.svg)](https://arxiv.org/abs/2308.13229)
+[![thecvf](https://img.shields.io/badge/CVF-Paper-7395C5.svg)](https://openaccess.thecvf.com/content/ICCV2023/papers/Cheng_ReST_A_Reconfigurable_Spatial-Temporal_Graph_Model_for_Multi-Camera_Multi-Object_Tracking_ICCV_2023_paper.pdf)
+[![thecvf](https://img.shields.io/badge/CVF-Supp-7395C5.svg)](https://openaccess.thecvf.com/content/ICCV2023/supplemental/Cheng_ReST_A_Reconfigurable_ICCV_2023_supplemental.pdf)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/rest-a-reconfigurable-spatial-temporal-graph/multi-object-tracking-on-wildtrack)](https://paperswithcode.com/sota/multi-object-tracking-on-wildtrack?p=rest-a-reconfigurable-spatial-temporal-graph)
 
 </div>
 

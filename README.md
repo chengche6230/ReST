@@ -6,7 +6,15 @@
 
 <sup>1</sup>National Tsing Hua University, Taiwan &nbsp;<sup>2</sup>National Chung Cheng University, Taiwan
 
-[![arXiv](https://img.shields.io/badge/arXiv-<2308.13229>-<COLOR>.svg)](https://arxiv.org/abs/2308.13229)
+[![arXiv](https://img.shields.io/badge/arXiv-2308.13229-b31b1b?logo=arxiv)](https://arxiv.org/abs/2308.13229)
+[![thecvf](https://custom-icon-badges.demolab.com/badge/Open_Access-Paper-7395C5.svg?logo=cvf&logoColor=white)](https://openaccess.thecvf.com/content/ICCV2023/papers/Cheng_ReST_A_Reconfigurable_Spatial-Temporal_Graph_Model_for_Multi-Camera_Multi-Object_Tracking_ICCV_2023_paper.pdf)
+[![thecvf](https://custom-icon-badges.demolab.com/badge/Open_Access-Supp-7395C5.svg?logo=cvf&logoColor=white)](https://openaccess.thecvf.com/content/ICCV2023/supplemental/Cheng_ReST_A_Reconfigurable_ICCV_2023_supplemental.pdf)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/rest-a-reconfigurable-spatial-temporal-graph/multi-object-tracking-on-wildtrack)](https://paperswithcode.com/sota/multi-object-tracking-on-wildtrack?p=rest-a-reconfigurable-spatial-temporal-graph)
+
+<!---
+[![thecvf](https://img.shields.io/badge/CVF-Paper-7395C5.svg)](https://openaccess.thecvf.com/content/ICCV2023/papers/Cheng_ReST_A_Reconfigurable_Spatial-Temporal_Graph_Model_for_Multi-Camera_Multi-Object_Tracking_ICCV_2023_paper.pdf)
+[![thecvf](https://img.shields.io/badge/CVF-Supp-7395C5.svg)](https://openaccess.thecvf.com/content/ICCV2023/supplemental/Cheng_ReST_A_Reconfigurable_ICCV_2023_supplemental.pdf)
+--->
 
 </div>
 
@@ -143,6 +151,8 @@ If you find this code useful for your research, please cite our paper
     author    = {Cheng, Cheng-Che and Qiu, Min-Xuan and Chiang, Chen-Kuo and Lai, Shang-Hong},
     title     = {ReST: A Reconfigurable Spatial-Temporal Graph Model for Multi-Camera Multi-Object Tracking},
     booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
-    year      = {2023}
+    month     = {October},
+    year      = {2023},
+    pages     = {10051-10060}
 }
 ```

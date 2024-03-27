@@ -38,6 +38,7 @@ class BasePreprocess:
             self.output_path = output_dir
         self.frames_output_path = os.path.join(self.output_path, 'frames')
         self.frames = {}
+        self.ground_plane = {}
 
         random.seed(random_seed)
 
@@ -147,7 +148,7 @@ class BasePreprocess:
         frames_id = list(sorted(self.frames.keys()))
         n = len(frames_id)
         n_test = int(self.test_ratio * n)
-        test_frames_id = frames_id[-n_test+1:]
+        test_frames_id = frames_id[-n_test:]
         attr = ['frame', 'id', 'bb_left', 'bb_top', 'bb_width', 'bb_height', 'x', 'y', 'z']
         gts = []
         for _ in range(len(self.annots_name)):
@@ -169,8 +170,33 @@ class BasePreprocess:
         for c in range(len(self.annots_name)):
             gts[c].to_csv(os.path.join(gt_path, f'c{c}.txt'), header=None, index=None, sep=',')
 
+        if not self.ground_plane:
+            return
+
+        gp_gts = pd.DataFrame(columns=attr)
+        for f in tqdm.tqdm(test_frames_id):
+            for det in self.ground_plane[f]:
+                frame_style = {'Wildtrack': f'0000{f * 5:04d}', 'PETS09': f'{f:03d}', 'CAMPUS': f'{f:04d}',
+                               'CityFlow': f'{f}'}
+                frame = frame_style[DATASET_NAME]
+                gp_gts = gp_gts.append({
+                    'frame': frame,
+                    'id': det[0],
+                    'bb_left': -1,
+                    'bb_top': -1,
+                    'bb_width': -1,
+                    'bb_height': -1,
+                    'x': det[1], 'y': det[2], 'z': 1
+                }, ignore_index=True)
+        for c in range(len(self.annots_name)):
+            gp_gts.to_csv(os.path.join(gt_path, f'gp.txt'), header=None, index=None, sep=',')
 
 class WildtrackPreprocess(BasePreprocess):
+
+    def get_worldgrid_from_pos(self, pos):
+        grid_y = pos % 480
+        grid_x = pos // 480
+        return grid_x, grid_y
 
     def load_annotations(self):
         """
@@ -195,6 +221,9 @@ class WildtrackPreprocess(BasePreprocess):
                     self.frames.setdefault(frame_id, []).append(
                         (x_min, y_min, width, height, track_id, cam_id)
                     )
+
+                grid_x, grid_y = self.get_worldgrid_from_pos(raw['positionID'])
+                self.ground_plane.setdefault(frame_id, []).append((track_id, grid_x, grid_y))
 
     def load_frames(self):
         # Copy from original dataset
